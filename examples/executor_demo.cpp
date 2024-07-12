@@ -6,7 +6,7 @@
 int main(int argc, char *argcv[])
 {
     // using namespace utility::executor;
-    using TaskExecutor = utility::executor::Executor<std::function<void(void)>>;
+    using TaskExecutor = utility::Executor<std::function<void(void)>>;
 
     std::unique_ptr<TaskExecutor> task_ptr{nullptr};
     task_ptr = std::make_unique<TaskExecutor>();

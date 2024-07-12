@@ -1,12 +1,15 @@
-/* Diagnostic Client library
- * Copyright (C) 2023  Avijit Dey
- *
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+/**
+ * @file task.h
+ * @author rui.peng (pengrui_2009@163.com)
+ * @brief support suspend/resume task
+ * @version 0.1
+ * @date 2024-07-12
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
-#ifndef DIAGNOSTIC_CLIENT_LIB_LIB_UTILITY_UTILITY_EXECUTOR_H
-#define DIAGNOSTIC_CLIENT_LIB_LIB_UTILITY_UTILITY_EXECUTOR_H
+#ifndef UTILITY_TASK_H
+#define UTILITY_TASK_H
 
 #include <iostream>
 #include <condition_variable>
@@ -116,4 +119,4 @@ namespace utility
         std::atomic<bool> running_;
     };
 } // namespace utility
-#endif // DIAGNOSTIC_CLIENT_LIB_LIB_UTILITY_UTILITY_EXECUTOR_H
+#endif // UTILITY_TASK_H
