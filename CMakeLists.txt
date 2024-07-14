@@ -12,10 +12,11 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(
     include
+    common/core/include/public
     # base
     # base/framework
 )
-
+include_directories(${PROJECT_BINARY_DIR}/third_party/dlt-daemon/include)
 # framework_lib
 # add_library(fmlib
 #     "base/MasterHandle.cc"
@@ -27,6 +28,20 @@ include_directories(
 #     fmt
 #     pthread
 # )
+
+add_subdirectory(third_party/googletest)
+
+add_subdirectory(third_party/dlt-daemon)
+
+add_subdirectory(common/threadpool/test)
+
+# add_subdirectory(common/core)
+
+# add_subdirectory(common/log)
+
+# add_subdirectory(common/signal)
+
+# add_subdirectory(common/timer)
 
 # example
 add_executable(task_demo 
@@ -41,6 +56,13 @@ add_executable(executor_demo
     "examples/executor_demo.cpp"
 )
 target_link_libraries(executor_demo
+    pthread
+)
+
+add_executable(hal_timer_thread_demo 
+    "examples/hal_timer_thread_demo.cpp"
+)
+target_link_libraries(hal_timer_thread_demo
     pthread
 )
 # install(TARGETS client DESTINATION lib/${PROJECT_NAME})

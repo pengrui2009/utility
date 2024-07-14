@@ -1,0 +1,13 @@
+# Config file for the ara::ara-timer package.
+#
+# This file exports the ara::ara-timer CMake target which should be
+# passed to the target_link_libraries() command.
+#
+# This also adds all dependencies of ara::ara-com to the user of
+# the package.
+
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+include("${CMAKE_CURRENT_LIST_DIR}/ara-timerTargets.cmake")

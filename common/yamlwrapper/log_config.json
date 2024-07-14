@@ -1,0 +1,11 @@
+{
+    "log_app_id":"yaml",
+    "log_app_description":"yaml log",
+    "log_default_level":"kVerbose",
+    "log_mode":[
+        "kFile",
+        "kConsole"
+    ],
+    "log_message_mode":"kNonModeled",
+    "log_file_path":"./log"
+}

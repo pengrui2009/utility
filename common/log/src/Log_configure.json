@@ -1,0 +1,23 @@
+/*
+ * @Description: This file only shows the log relevent configurations.
+ */
+{
+    /*Application ID. Max up to 4 characters. DFAULT:"XXXX"*/
+    "log_app_id": "tuap",
+    /*Application Description. DFAULT:""*/
+    "log_app_description": "Tu-AP log",
+    /*Log level. string:kOff,kFatal,kError,kWarn,kInfo,kDebug,kVerbose DFAULT:"kWarn" */
+    "log_default_level": "kVerbose",
+    /*Log Mode. string array:[kRemote,kFile,kConsole]. DFAULT:"kConsole" */
+    "log_mode": [
+        "kConsole",
+        "kFile"
+    ],
+    /*Message mode. string:kModeled,kNonModeled DEFAULT:"kNonModeled" */
+    "log_message_mode": "kNonModeled",
+    /* File save path. Support for both relative and absolute path. DEFAULT:"./"
+     * You can also specific the filename with .txt or .dlt sufix, 
+     * which represent ascii encode or binary encode 
+     */
+    "log_file_path": "./log/tusen.txt"
+}

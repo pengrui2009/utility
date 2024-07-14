@@ -1,0 +1,13 @@
+# Config file for the ara::ara-com package.
+#
+# This file exports the ara::ara-ipc CMake target which should be
+# passed to the target_link_libraries() command.
+#
+# This also adds all dependencies of ara::ara-com to the user of
+# the package.
+
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+include("${CMAKE_CURRENT_LIST_DIR}/ara-ipcTargets.cmake")

@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+include("${CMAKE_CURRENT_LIST_DIR}/ara-logTargets.cmake")
+set(ARA_LOG_LIBS ara-log)
+set_and_check(ARA_LOG_INCLUDE_DIR "@PACKAGE_ARA_LOG_INCLUDE_DIR@")
+set_and_check(ARA_LOG_LIBRARIES_DIR "@PACKAGE_ARA_LOG_LIBRARIES_DIR@")
+check_required_components(ara-log)
