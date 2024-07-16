@@ -42,6 +42,7 @@ add_subdirectory(common/threadpool/test)
 # add_subdirectory(common/signal)
 
 # add_subdirectory(common/timer)
+# add_subdirectory(common/yamlwrapper/test)
 
 # example
 add_executable(task_demo 
